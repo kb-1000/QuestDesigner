@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package questdesigner.protobuf;
+
+option optimize_for = LITE_RUNTIME;
+
+option java_package = "questdesigner.protobuf";
+option java_multiple_files = true;
+
+message TextItem {
+    string response = 1;
+    repeated TextItem subItems = 2;
+    string text = 3;
+}

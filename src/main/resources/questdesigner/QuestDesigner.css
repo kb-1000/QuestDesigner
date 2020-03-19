@@ -1,0 +1,11 @@
+.text-field.invalid {
+  -fx-text-box-border: red;
+  -fx-focus-color: red;
+  -fx-border-color: red;
+}
+
+.text-field.invalid:focused {
+  -fx-text-box-border: red;
+  -fx-focus-color: red;
+  -fx-border-color: red;
+}

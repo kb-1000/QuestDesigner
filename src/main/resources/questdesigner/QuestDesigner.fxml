@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.Scene?>
+<?import questdesigner.CustomTreeView?>
+<?import java.net.URL?>
+<?import javax.swing.text.html.StyleSheet?>
+<Scene fx:id="scene" height="400" width="600" xmlns="http://javafx.com/javafx/10.0.2-internal"
+       xmlns:fx="http://javafx.com/fxml/1" fx:controller="questdesigner.QuestDesignerController"
+       stylesheets="@QuestDesigner.css">
+    <VBox>
+        <!--<prefWidth>600.0</prefWidth>
+        <prefHeight>400.0</prefHeight>-->
+        <MenuBar>
+            <Menu text="File">
+                <MenuItem onAction="#newQuestTree" text="New"/>
+                <MenuItem accelerator="Ctrl+O" onAction="#openQuestTree" text="Open..."/>
+                <SeparatorMenuItem/>
+                <MenuItem accelerator="Ctrl+Shift+S" onAction="#saveQuestTree" text="Save as..."/>
+                <SeparatorMenuItem/>
+                <MenuItem onAction="#exportQuestTree" text="Export as Java..."/>
+                <SeparatorMenuItem/>
+                <MenuItem onAction="#exit" text="Exit"/>
+            </Menu>
+        </MenuBar>
+        <CustomTreeView fx:id="treeView">
+        </CustomTreeView>
+        <VBox>
+            <padding>
+                <Insets topRightBottomLeft="10"/>
+            </padding>
+            <VBox>
+                <padding>
+                    <Insets topRightBottomLeft="10"/>
+                </padding>
+                <Label text="Choice"/>
+                <TextArea fx:id="choiceTextArea"/>
+            </VBox>
+            <VBox>
+                <padding>
+                    <Insets topRightBottomLeft="10"/>
+                </padding>
+                <Label text="Answer"/>
+                <TextArea fx:id="answerTextArea"/>
+            </VBox>
+        </VBox>
+    </VBox>
+</Scene>
